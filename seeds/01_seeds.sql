@@ -4,7 +4,7 @@ DELETE FROM reservations;
 
 INSERT INTO users
     (name, email, password)
-VALUES
+VALUES 
     ('brandon fake', 'fake1@hotmail.com'
 , '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.') ,
     ('ayo fake', 'fake2@hotmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
