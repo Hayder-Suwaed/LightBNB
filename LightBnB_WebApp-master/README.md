@@ -23,7 +23,7 @@
 └── server
   ├── apiRoutes.js
   ├── database.js
-  ├── json
+  ├── json 
   ├── server.js
   └── userRoutes.js
 ```
