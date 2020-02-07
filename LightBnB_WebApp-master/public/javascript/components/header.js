@@ -46,14 +46,16 @@ $(() => {
   });
 
   $("header").on("click", '.my_reservations_button', function() {
-    propertyListings.clearListings();
+    // propertyListings.clearListings();
     getAllReservations()
       .then(function(json) {
-        propertyListings.addProperties(json.reservations, true);
-        views_manager.show('listings');
+        console.log("PROPS LISTINGS", window)
+        reservationListings.addReservations(json.reservations, true);
+        views_manager.show('reservations');
       })
       .catch(error => console.error(error));
   });
+
   $("header").on("click", '.my_listing_button', function() {
     propertyListings.clearListings();
     getAllListings(`owner_id=${currentUser.id}`)
@@ -67,7 +69,7 @@ $(() => {
     propertyListings.clearListings();
     getAllListings()
       .then(function(json) {
-        propertyListings.addProperties(json.properties);
+        propertyListings.addReservation(json.properties);
         views_manager.show('listings');
     });
   });
